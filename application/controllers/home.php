@@ -40,8 +40,8 @@ class home extends CI_Controller {
 	 function homeadmin()
 	  {
 	 // 	$this->m->ambildata('working')->result();
-		$this->load->view('templates/header');
+		//$this->load->view('templates/header');
 	 	$this->load->view('v_admingis');
-	 	$this->load->view('templates/footer');
+	 	//$this->load->view('templates/footer');
 	 }
 }
