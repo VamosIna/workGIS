@@ -5,7 +5,7 @@ class home extends CI_Controller {
     parent::__construct();
 
 
-    //$this->load->model('example');
+    $this->load->model('M_admin');
 }
 	  function index()
 	 {
@@ -42,6 +42,21 @@ class home extends CI_Controller {
 	 // 	$this->m->ambildata('working')->result();
 		//$this->load->view('templates/header');
 	 	$this->load->view('v_admingis');
+	 	//$this->load->view('templates/footer');
+	 }
+
+	 function editData()
+	  {
+	 // 	$this->m->ambildata('working')->result();
+		//$this->load->view('templates/header');
+	 	$this->load->view('v_admindit');
+	 	//$this->load->view('templates/footer');
+	 }
+	 function lihatData()
+	  {
+	 // 	$this->m->ambildata('working')->result();
+		//$this->load->view('templates/header');
+	 	$this->load->view('v_admintbl');
 	 	//$this->load->view('templates/footer');
 	 }
 }

@@ -132,66 +132,7 @@
                  
 
 
-              <form class="user">
-                <div class="form-group" method="post">
-
-                  <div class="col-sm-6 mb-3 mb-sm-3">
-                    <input type="text" class="form-control form-control-user" id="NamaTempat" placeholder="NAMA TEMPAT">
-                  </div>
-                   <div class="col-sm-6 mb-3 mb-sm-3">
-                    <input type="text" class="form-control form-control-user" id="LatTempat" placeholder="LATITUDE">
-                  </div>
-                   <div class="col-sm-6 mb-3 mb-sm-3">
-                    <input type="text" class="form-control form-control-user" id="LongTempat" placeholder="LONGTITUDE">
-                  </div>
-                  <div class="col-sm-6 mb-1 mb-sm-3">
-                    <input type="text" class="form-control form-control-user" id="Desctempat" placeholder="DESKRIPSI TEMPAT">
-                  </div>
-                     <div class="col-sm-6 mb-1 mb-sm-1">
-                      <label>Image</label>
-                    <input type="file" class="form-control-user" name="image">
-                  </div>
-
-                
-                <a href="#" class="btn btn-success btn-icon-split">
-                    <span class="icon text-white-50">
-                      <i class="fas fa-check"></i>
-                    </span>
-                    <span class="text">Simpan Maps</span>
-                  </a>
-                </div>
-                </div>
-              </div>
-
-          <div id="mapid" class="col-sm-6 mb-3 mb-sm-3">
-                <style type="text/css">
-                  #mapid { 
-
-                    right: -535px;
-                    bottom:380px;
-                    height: 320px; 
-                             
-                           }
-                </style>
-                    <script type="text/javascript">
-                      var popup = new L.Popup();
-                      var map = L.map('mapid').setView([-7.980256, 112.629921], 13);
-
-                    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-                        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-                    }).addTo(map);
-                    map.on('click', onMapClick);
-
-      function onMapClick(e) {
-        var latlngStr = '(' + e.latlng.lat + ', ' + e.latlng.lng + ')';
-
-        popup.setLatLng(e.latlng);
-        popup.setContent("Koordinat Anda " + latlngStr);
-
-        map.openPopup(popup);
-      }
-                    </script>
-                    </div>
+      
 
         </div>
         <!-- /.container-fluid -->
