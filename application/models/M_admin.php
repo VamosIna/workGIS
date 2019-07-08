@@ -2,7 +2,7 @@
 
 class M_admin extends CI_Model {
     
-    public function insert($username){
-       
-    }
+    function insert_maps($data){
+	 	$this->db->insert('cshop', $data);
+	 }
 }

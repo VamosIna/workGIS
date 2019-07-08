@@ -132,20 +132,20 @@
                  
 
 
-              <form class="user">
-                <div class="form-group" method="post">
-
+              
+                <div class="form-group" >
+                  <form class="user" action="<?php echo site_url('index.php/home/tambahmaps/'); ?>" method="post" >
                   <div class="col-sm-6 mb-3 mb-sm-3">
-                    <input type="text" class="form-control form-control-user" id="NamaTempat" placeholder="NAMA TEMPAT">
+                    <input type="text" class="form-control form-control-user" name="Namat" placeholder="NAMA TEMPAT">
                   </div>
                    <div class="col-sm-6 mb-3 mb-sm-3">
-                    <input type="text" class="form-control form-control-user" id="LatTempat" placeholder="LATITUDE">
+                    <input type="text" class="form-control form-control-user" name="Latt" placeholder="LATITUDE">
                   </div>
                    <div class="col-sm-6 mb-3 mb-sm-3">
-                    <input type="text" class="form-control form-control-user" id="LongTempat" placeholder="LONGTITUDE">
+                    <input type="text" class="form-control form-control-user" name="Longt" placeholder="LONGTITUDE">
                   </div>
                   <div class="col-sm-6 mb-1 mb-sm-3">
-                    <input type="text" class="form-control form-control-user" id="Desctempat" placeholder="DESKRIPSI TEMPAT">
+                    <input type="text" class="form-control form-control-user" name="Desct" placeholder="DESKRIPSI TEMPAT">
                   </div>
                      <div class="col-sm-6 mb-1 mb-sm-1">
                       <label>Image</label>
@@ -153,13 +153,15 @@
                   </div>
 
                 
-                <a href="#" class="btn btn-success btn-icon-split">
+                <!-- <a class="btn btn-success btn-icon-split">
                     <span class="icon text-white-50">
                       <i class="fas fa-check"></i>
                     </span>
                     <span class="text">Simpan Maps</span>
-                  </a>
-                </div>
+                  </a> -->
+
+                <input type="submit" class="btn btn-primary" value="Simpan" />   
+                  </div>
                 </div>
               </div>
 
@@ -183,8 +185,8 @@
                     map.on('click', onMapClick);
 
       function onMapClick(e) {
-        var latlngStr = '(' + e.latlng.lat + ', ' + e.latlng.lng + ')';
-
+        var latlngStr = '(' + e.latlng.lat + '  &   ' + e.latlng.lng + ')';
+        
         popup.setLatLng(e.latlng);
         popup.setContent("Koordinat Anda " + latlngStr);
 

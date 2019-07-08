@@ -4,7 +4,9 @@ class home extends CI_Controller {
 	function __construct() {
     parent::__construct();
 
-
+		//$this->load->library('session');
+		//$this->load->model('Model_admin');
+		//$this->load->model('Model_user');
     $this->load->model('M_admin');
 }
 	  function index()
@@ -59,4 +61,16 @@ class home extends CI_Controller {
 	 	$this->load->view('v_admintbl');
 	 	//$this->load->view('templates/footer');
 	 }
+	 public function tambahmaps(){
+		$data = array(
+			'idcs' => $this->input->post(''),
+			'namacs' => $this->input->post('Namat'),
+			'latcs' => $this->input->post('Latt'),
+			'longcs' => $this->input->post('Longt'),
+			'descs' => $this->input->post('Desct')				
+		); 
+		$this->M_admin->insert_maps($data);
+		redirect(site_url('index.php/home/amin'));
+
+		}	
 }
