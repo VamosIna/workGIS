@@ -185,11 +185,9 @@
                     map.on('click', onMapClick);
 
       function onMapClick(e) {
-        var latlngStr = '(' + e.latlng.lat + '  &   ' + e.latlng.lng + ')';
-        
+        var latlngStr = '(' + e.latlng.lat + '  dan    ' + e.latlng.lng + ')';
         popup.setLatLng(e.latlng);
         popup.setContent("Koordinat Anda " + latlngStr);
-
         map.openPopup(popup);
       }
                     </script>
